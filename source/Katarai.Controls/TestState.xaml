@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="Katarai.Controls.TestState" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:Katarai.Controls"
+             xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <UserControl.Resources>
+        <controls:PlayerTestStateToVisibilitConverter x:Key="PlayerTestStateToVisibilityConverter" />
+    </UserControl.Resources>
+    <Grid>
+        <Viewbox Height="30">
+            <Canvas Width="30" Height="30">
+                <Path Fill="#ff991115"
+                      Data="F1 M 104.578,55.122 C 104.578,57.027 103.037,58.572 101.137,58.572 C 99.236,58.572 97.695,57.027 97.695,55.122 C 97.695,53.218 99.236,51.673 101.137,51.673 C 103.037,51.673 104.578,53.218 104.578,55.122 Z"
+                      RenderTransformOrigin="0.5,0.5" Canvas.Left="77.5" Canvas.Top="32" Height="30" Stretch="Fill"
+                      Width="30" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Path.Visibility>
+                        <Binding Path="PlayerTestState"
+                                 Converter="{StaticResource PlayerTestStateToVisibilityConverter}">
+                            <Binding.ConverterParameter>
+                                <system:String>Red</system:String>
+                            </Binding.ConverterParameter>
+                        </Binding>
+                    </Path.Visibility>
+                </Path>
+                <Path x:Name="Green" Fill="#ff00853c"
+                      Data="F1 M 104.578,55.122 C 104.578,57.027 103.037,58.572 101.137,58.572 C 99.236,58.572 97.695,57.027 97.695,55.122 C 97.695,53.218 99.236,51.673 101.137,51.673 C 103.037,51.673 104.578,53.218 104.578,55.122 Z"
+                      RenderTransformOrigin="0.5,0.5" Canvas.Left="77.5" Canvas.Top="32" Height="30" Stretch="Fill"
+                      Width="30" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Path.Visibility>
+                        <Binding Path="PlayerTestState"
+                                 Converter="{StaticResource PlayerTestStateToVisibilityConverter}">
+                            <Binding.ConverterParameter>
+                                <system:String>Green</system:String>
+                            </Binding.ConverterParameter>
+                        </Binding>
+                    </Path.Visibility>
+                </Path>
+                <TextBlock FontFamily="Century Gothic" Text="{Binding Title}" RenderTransformOrigin="0.5,0.5" Canvas.Left="0" Canvas.Top="0"
+                   Foreground="#FF352063"
+                   Margin="38,-12,-35,19" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"
+                   FontWeight="Bold">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform />
+                            <TranslateTransform X="80" Y="47" />
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </Canvas>
+        </Viewbox>
+    </Grid>
+</UserControl>

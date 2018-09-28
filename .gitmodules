@@ -1,0 +1,6 @@
+[submodule "rake-tasks"]
+	path = rake-tasks
+	url = https://github.com/Chillisoft/rake-tasks.git
+[submodule "gulp-tasks"]
+	path = gulp-tasks
+	url = https://github.com/fluffynuts/gulp-tasks

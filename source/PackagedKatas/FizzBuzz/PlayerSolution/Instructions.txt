@@ -1,0 +1,45 @@
+﻿  BEFORE YOU START :
+  This Kata is meant to teach TDD cadence, growing a solution using tests and speed. 
+  It’s designed to be a bit long for the time you have when you start, and the idea 
+  is to practice it until you can do it really fast, while rigorously practising TDD. 
+  This will ingrain the cadence of TDD and the keyboard shortcuts and refactorings 
+  you need to be fast. Remember, the only way to go fast is to go well. 
+
+  RULES : 
+  1.	Strictly practice TDD: Red, Green, Refactor
+  2.	Clean Code is required:
+    2.1.	Intention-revealing names
+    2.2.	Verb/verb-phrase method names
+    2.3.	Methods should do one thing and be short, with no side-effects
+    2.4.	Methods should contain only one level of abstraction
+    2.5.	Code should read like a top-down narrative
+    2.6.	No unnecessary code
+    2.7.	DRY
+    2.8.	Unit tests that test pieces of the algorithm, not only acceptance level tests.
+
+  GOALS : 
+  +	Silver: 10 minutes
+  +	Gold:   7 minutes
+
+  THE KATA : 
+  Return “Fizz”, “Buzz” or “FizzBuzz”.
+  For a given natural number greater zero return
+   +	“Fizz” if the number is divisible  by 3
+   +	“Buzz” if the number is divisible  by 5
+   +	“FizzBuzz” if the number is divisible by both 3 and 5
+
+  TEST CASES : 
+ 
+  Input	Result
+   1	1
+   2	2
+   3	Fizz
+   4	4
+   5	Buzz
+   6	Fizz
+   9	Fizz
+   10	Buzz
+   15	FizzBuzz
+   20	Buzz
+   30	FizzBuzz
+   75	FizzBuzz

@@ -1,0 +1,16 @@
+/*directory structure must remain as MasterSolution, PlayerSolution*/
+{
+"masterSolutionAssembly":"Katarai.KataData.StringCalculator.dll",
+"playerSolutionName":"PlayerStringKata.sln",
+"playerSolutionAssembly":"PlayerStringKata.dll",
+"kataName":"String Calculator",
+"instructions":{
+		"header":"Visual Studio is being started up with a fresh solution for your kata.  The solution contains the instructions for the kata as well as some boilerplate classes for you to work with.",
+		"content":[
+			"Some things to note about doing a kata with Katarai:",
+			"- Katarai currently only supports the NUnit [Test] attribute - please use only this for your test methods.",
+			"- The provided Constructor test shows how to create your SUT so that Katarai can work with it.",
+			"- Please do an initial build of the solution before you write your first test - this is the official kata start."
+		]
+	}
+}

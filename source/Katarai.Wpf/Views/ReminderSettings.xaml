@@ -1,0 +1,72 @@
+﻿<Window x:Class="Katarai.Wpf.Views.ReminderSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wpf="clr-namespace:Katarai.Wpf"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:viewModels="clr-namespace:Katarai.Wpf.ViewModels"
+        Title="Reminder Settings" Height="300" Width="350"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow">
+    <Window.DataContext>
+        <viewModels:ReminderSettingsViewModel></viewModels:ReminderSettingsViewModel>
+    </Window.DataContext>
+    <StackPanel Background="{x:Static SystemColors.MenuBrush}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Day" FontWeight="Bold" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+        <Label Grid.Row="0" Grid.Column="1" Content="Show Reminder" FontWeight="Bold" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+        <Label Grid.Row="0" Grid.Column="2" Content="Time" FontWeight="Bold" VerticalAlignment="Center" VerticalContentAlignment="Center"  HorizontalAlignment="Center" />
+        <Label Grid.Row="1" Grid.Column="0" Content="Sunday" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+        <CheckBox Grid.Row="1" Grid.Column="1" IsChecked="{Binding SundayShowReminder}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <xctk:TimePicker Grid.Row="1" Grid.Column="2" Value="{Binding SundayTime}" TimeInterval="00:30:00" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+        <Label Grid.Row="2" Grid.Column="0" Content="Monday" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+            <CheckBox Grid.Row="2" Grid.Column="1" IsChecked="{Binding MondayShowReminder}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <xctk:TimePicker Grid.Row="2" Grid.Column="2" Value="{Binding MondayTime}" TimeInterval="00:30:00"  VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+        <Label Grid.Row="3" Grid.Column="0" Content="Tuesday" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+            <CheckBox Grid.Row="3" Grid.Column="1" IsChecked="{Binding TuesdayShowReminder}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <xctk:TimePicker Grid.Row="3" Grid.Column="2" Value="{Binding TuesdayTime}" TimeInterval="00:30:00"  VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+        <Label Grid.Row="4" Grid.Column="0" Content="Wednesday" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+            <CheckBox Grid.Row="4" Grid.Column="1" IsChecked="{Binding WednesdayShowReminder}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <xctk:TimePicker Grid.Row="4" Grid.Column="2" Value="{Binding WednesdayTime}" TimeInterval="00:30:00"  VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+        <Label Grid.Row="5" Grid.Column="0" Content="Thursday" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+            <CheckBox Grid.Row="5" Grid.Column="1" IsChecked="{Binding ThursdayShowReminder}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <xctk:TimePicker Grid.Row="5" Grid.Column="2" Value="{Binding ThursdayTime}" TimeInterval="00:30:00"  VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+        <Label Grid.Row="6" Grid.Column="0" Content="Friday" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+            <CheckBox Grid.Row="6" Grid.Column="1" IsChecked="{Binding FridayShowReminder}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <xctk:TimePicker Grid.Row="6" Grid.Column="2" Value="{Binding FridayTime}" TimeInterval="00:30:00"  VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+        <Label Grid.Row="7" Grid.Column="0" Content="Saturday" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+        <CheckBox Grid.Row="7" Grid.Column="1" IsChecked="{Binding SaturdayShowReminder}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <xctk:TimePicker Grid.Row="7" Grid.Column="2" Value="{Binding SaturdayTime}" TimeInterval="00:30:00"  VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" />
+    </Grid>
+    <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="2" Grid.Column="0" Content="Save" Width="80" Command="{Binding SaveReminderSettingsCommand}" CommandParameter="{Binding Reminders}"/>
+            <Button Grid.Row="2"  Grid.Column="1" Content="Cancel" Width="80" Click="Cancel_OnClick"/>
+     </Grid>
+    
+    
+    </StackPanel>
+</Window>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3A7DBEA0-7AA7-47F2-8EB2-F3B9D455A02D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Katarai.Acceptance.StringCalculator.Tests</RootNamespace>
+    <AssemblyName>Katarai.Acceptance.StringCalculator.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NSubstitute, Version=1.9.2.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
+      <HintPath>..\packages\NSubstitute.1.9.2.0\lib\net45\NSubstitute.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.0.5813.39031, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NewTestWrittenWithoutAFailingTestForPreviousImplementation\StringCalculator.cs" />
+    <Compile Include="NewTestWrittenWithoutAFailingTestForPreviousImplementation\TestStringCalculator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecificTestNegativeNumbers\StringCalculator.cs" />
+    <Compile Include="SpecificTestNegativeNumbers\TestStringCalculator.cs" />
+    <Compile Include="TestRunner.cs" />
+    <Compile Include="UnknownStateMultipleCustomDelimiters2\StringCalculator.cs" />
+    <Compile Include="UnknownStateMultipleCustomDelimiters2\TestStringCalculator.cs" />
+    <Compile Include="UnknownStateMultipleCustomDelimiters\StringCalculator.cs" />
+    <Compile Include="UnknownStateMultipleCustomDelimiters\TestStringCalculator.cs" />
+    <Compile Include="UnknownStateTwoNumbers2\StringCalculator.cs" />
+    <Compile Include="UnknownStateTwoNumbers2\TestStringCalculator.cs" />
+    <Compile Include="NewTestWrittenWithoutAPassingTestForPreviousImplementation\StringCalculator.cs" />
+    <Compile Include="NewTestWrittenWithoutAPassingTestForPreviousImplementation\TestStringCalculator.cs" />
+    <Compile Include="UnknownStateTwoNumbers3\StringCalculator.cs" />
+    <Compile Include="UnknownStateTwoNumbers3\TestStringCalculator.cs" />
+    <Compile Include="UnknownStateTwoNumbers\StringCalculator.cs" />
+    <Compile Include="UnknownStateTwoNumbers\TestStringCalculator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Katarai.Engine\Katarai.Engine.csproj">
+      <Project>{84672198-2C10-42D9-850E-8D22E4E9BF71}</Project>
+      <Name>Katarai.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Katarai.KataData.StringCalculator\Katarai.KataData.StringCalculator.csproj">
+      <Project>{1C4B5DA8-B10B-4E62-A7EA-34A356D0ED6D}</Project>
+      <Name>Katarai.KataData.StringCalculator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Katarai.Runner\Katarai.Runner.csproj">
+      <Project>{903B1485-B358-4FC7-AA4F-01DE68318FB3}</Project>
+      <Name>Katarai.Runner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Katarai.StringCalculator.Interfaces\Katarai.StringCalculator.Interfaces.csproj">
+      <Project>{B7D04C37-721A-4811-B710-06B7C2A325D4}</Project>
+      <Name>Katarai.StringCalculator.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Katarai.Utils\Katarai.Utils.csproj">
+      <Project>{1026FFDB-9822-4212-B573-B2823DB69E2D}</Project>
+      <Name>Katarai.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Katarai.Wpf\Katarai.Wpf.csproj">
+      <Project>{827E1D02-30A8-4DD7-AE93-B7DB4FEDA15A}</Project>
+      <Name>Katarai.Wpf</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

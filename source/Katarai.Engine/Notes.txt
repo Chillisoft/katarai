@@ -1,0 +1,31 @@
+﻿
+Run Golden Tests against player imp
+ - (Find Level of Impl) 
+  - Highest Consecutive Level that passes
+  - Highest Passed (Edge Cases missed)
+  - Number of Passes 
+
+Run Golden Implementations from 0 to n against Player Tests
+ - (Find level of tests)
+  - Highest consecutive level passed
+  - Highest Passed
+  - Number of Passes
+
+---
+Compare Levels and make verdict on code....
+(TL = Test Level ; IL = Implementation Level)
+ - If Match then at Beginning of RGR cycle
+ - If TL < IL then moved too far - "Over Implemented, is there something smaller you can do?"
+ - If TL = IL + 1 then we are finished the R phase
+ - If TL > IL + 1 then test too big - "Can you find a smaller change to test for?"
+ - 
+
+
+
+ =========================
+ = First Red State = 
+ - Player Test @ 1
+ - Player Impl @ 0
+ - Golden Tests up to 1
+ - Golden Implementation up to 1
+ ====================================
